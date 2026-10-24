@@ -1,0 +1,164 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Search any city and discover its current weather conditions.">
+
+    <title>WeatherNow | Live Weather Portal</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="weather-app">
+
+        <!-- Header -->
+        <header class="app-header">
+            <a href="#" class="brand">
+                <span class="brand-icon">☁</span>
+                WeatherNow<span>.</span>
+            </a>
+
+            <p class="header-label">LIVE WEATHER PORTAL</p>
+        </header>
+
+        <!-- Introduction -->
+        <section class="intro">
+            <p class="eyebrow">YOUR WEATHER, AT A GLANCE</p>
+
+            <h1>Discover the weather<br>
+                <span>where you are.</span>
+            </h1>
+
+            <p class="intro-text">
+                Get current weather conditions and temperatures
+                for cities around the world.
+            </p>
+        </section>
+
+        <!-- Search Form -->
+        <form class="search-form" id="search-form">
+            <label for="city-input" class="sr-only">
+                Enter city name
+            </label>
+
+            <span class="search-icon" aria-hidden="true">⌕</span>
+
+            <input
+                type="text"
+                id="city-input"
+                placeholder="Enter city name..."
+                autocomplete="off"
+                required
+            >
+
+            <button type="submit" id="search-button">
+                Search
+            </button>
+        </form>
+
+        <!-- Loading Message -->
+        <p id="loading" class="message" role="status" hidden>
+            Loading weather data...
+        </p>
+
+        <!-- Error Message -->
+        <p id="error-message" class="error-message" role="alert" hidden>
+        </p>
+
+        <!-- Initial State -->
+        <section class="welcome-card" id="welcome-card">
+            <div class="welcome-icon">🌤️</div>
+
+            <h2>Ready to explore?</h2>
+
+            <p>
+                Enter a city above to discover its current
+                weather conditions.
+            </p>
+        </section>
+
+        <!-- Weather Results -->
+        <section
+            class="weather-result"
+            id="weather-result"
+            aria-live="polite"
+            hidden
+        >
+            <div class="weather-top">
+                <div>
+                    <p class="result-label">CURRENT WEATHER</p>
+
+                    <h2 id="city-name">City Name</h2>
+
+                    <p id="country-name" class="country-name"></p>
+                </div>
+
+                <div class="weather-icon" id="weather-icon">
+                    🌤️
+                </div>
+            </div>
+
+            <p class="weather-description" id="weather-description">
+                Weather condition
+            </p>
+
+            <div class="temperature-row">
+                <h3 id="temperature">--°C</h3>
+
+                <div class="temperature-details">
+                    <p>Feels like <strong id="feels-like">--°C</strong></p>
+                    <p>High / Low <strong id="high-low">--° / --°</strong></p>
+                </div>
+            </div>
+
+            <div class="weather-stats">
+
+                <article class="weather-stat">
+                    <span class="stat-emoji">💧</span>
+                    <p>Humidity</p>
+                    <strong id="humidity">--%</strong>
+                </article>
+
+                <article class="weather-stat">
+                    <span class="stat-emoji">💨</span>
+                    <p>Wind speed</p>
+                    <strong id="wind-speed">-- m/s</strong>
+                </article>
+
+                <article class="weather-stat">
+                    <span class="stat-emoji">🌡️</span>
+                    <p>Pressure</p>
+                    <strong id="pressure">-- hPa</strong>
+                </article>
+
+            </div>
+
+            <p class="updated-at" id="updated-at"></p>
+        </section>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <p>Weather information powered by OpenWeatherMap</p>
+            <p>Built with HTML, CSS & JavaScript</p>
+        </footer>
+
+    </main>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+`
